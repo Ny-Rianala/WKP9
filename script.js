@@ -3,9 +3,9 @@ const listOfMovies = document.querySelector('.movies');
 
 //fetch data from the url
 async function fetchMovies () {
-    let response = await fetch(`${baseEndPoint}?q=`);
+    let res = await fetch(`${baseEndPoint}?q=`);
     console.log(`${baseEndPoint}?q=`);
-    const movies = await response.json();
+    const movies = await res.json();
     //add it in html
     const  html = movies
     .sort(function(a, b) {
