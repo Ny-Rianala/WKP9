@@ -1,0 +1,17 @@
+ul > li {
+    list-style: none;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.first-list li {
+    align-items: flex-end;
+}
+
+.second-list li {
+    justify-content: space-between;
+}
