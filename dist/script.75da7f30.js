@@ -28340,7 +28340,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 // import "./index.css";
 function MovieGenerator(props) {
   const movies = props.movie;
-  const html = movies.map(film => {
+  const html = movies.sort((x, y) => y.rt_score - x.rt_score).map(film => {
     return /*#__PURE__*/_react.default.createElement("div", {
       key: (0, _randomId.default)()
     }, /*#__PURE__*/_react.default.createElement("div", {
@@ -28441,7 +28441,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52442" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52898" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -5,7 +5,8 @@ import randomId from "random-id";
 
 function MovieGenerator(props) {
     const movies = props.movie;
-    const html = movies.map(film => {return (
+    const html = movies.sort((x, y) => y.rt_score - x.rt_score)
+    .map(film => {return (
         <div key={randomId()}>
             <div className="list-of-movies">
                 <div className="cards"> 
