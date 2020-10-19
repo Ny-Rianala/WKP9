@@ -1,6 +1,6 @@
 import React from "react";
-// import "./index.css";
 import randomId from "random-id";
+
 
 
 function MovieGenerator(props) {

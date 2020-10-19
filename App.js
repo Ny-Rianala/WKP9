@@ -1,9 +1,11 @@
 import MovieGenerator from "./MovieGenerator.js";
 import React, { useState, useEffect } from "react";
+import Header from "./Header.js";
 import randomId from "random-id";
 
 
-//Fetch all of the data
+
+//Fetch all of data
 function App() {
     const [allMovies, setAllMovie] = useState([]);
 
@@ -18,7 +20,10 @@ useEffect(() => {
 }, []);
     const id = allMovies.map(idMovie => idMovie.id)
     return (
-        <MovieGenerator key={randomId()} movie = {allMovies}/>
+        <div>
+            <Header />
+            <MovieGenerator key={randomId()} movie = {allMovies}/>
+        </div>
     )
 }
 

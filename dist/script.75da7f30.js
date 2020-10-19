@@ -28337,7 +28337,6 @@ var _randomId = _interopRequireDefault(require("random-id"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// import "./index.css";
 function MovieGenerator(props) {
   const movies = props.movie;
   const html = movies.sort((x, y) => y.rt_score - x.rt_score).map(film => {
@@ -28359,7 +28358,27 @@ function MovieGenerator(props) {
 
 var _default = MovieGenerator;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","random-id":"node_modules/random-id/index.js"}],"App.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","random-id":"node_modules/random-id/index.js"}],"Header.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function Header() {
+  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h1", {
+    className: "bigTitle"
+  }, "Ghibli Movie"), /*#__PURE__*/_react.default.createElement("p", null, "From the best, to the worst"));
+}
+
+var _default = Header;
+exports.default = _default;
+},{"react":"node_modules/react/index.js"}],"App.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -28371,6 +28390,8 @@ var _MovieGenerator = _interopRequireDefault(require("./MovieGenerator.js"));
 
 var _react = _interopRequireWildcard(require("react"));
 
+var _Header = _interopRequireDefault(require("./Header.js"));
+
 var _randomId = _interopRequireDefault(require("random-id"));
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
@@ -28379,7 +28400,7 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-//Fetch all of the data
+//Fetch all of data
 function App() {
   const [allMovies, setAllMovie] = (0, _react.useState)([]);
 
@@ -28393,15 +28414,15 @@ function App() {
     fetchMovies();
   }, []);
   const id = allMovies.map(idMovie => idMovie.id);
-  return /*#__PURE__*/_react.default.createElement(_MovieGenerator.default, {
+  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_Header.default, null), /*#__PURE__*/_react.default.createElement(_MovieGenerator.default, {
     key: (0, _randomId.default)(),
     movie: allMovies
-  });
+  }));
 }
 
 var _default = App;
 exports.default = _default;
-},{"./MovieGenerator.js":"MovieGenerator.js","react":"node_modules/react/index.js","random-id":"node_modules/random-id/index.js"}],"script.js":[function(require,module,exports) {
+},{"./MovieGenerator.js":"MovieGenerator.js","react":"node_modules/react/index.js","./Header.js":"Header.js","random-id":"node_modules/random-id/index.js"}],"script.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -28441,7 +28462,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52898" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52442" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
