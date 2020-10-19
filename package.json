@@ -1,0 +1,32 @@
+{
+  "name": "wkp9",
+  "version": "1.0.0",
+  "description": "Hey team!\r After a major graded project, let's do something different, and a little bit more straightforward.\r Today we’re going to build a list of the Studio Ghibli Movies, ranked from best to worst. If you haven’t seen any of those, I suggest you to look on the Onja hard drive! (after completing the project of course). They are amazing ✨",
+  "main": "App.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ny-Rianala/WKP9.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "browserslist": [
+    "last 3 and_chr versions",
+    "last 3 chrome versions",
+    "last 3 opera versions",
+    "last 3 ios_saf versions",
+    "last 3 safari versions"
+  ],
+  "bugs": {
+    "url": "https://github.com/Ny-Rianala/WKP9/issues"
+  },
+  "homepage": "https://github.com/Ny-Rianala/WKP9#readme",
+  "dependencies": {
+    "random-id": "^1.0.4",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0"
+  },
+  "devDependencies": {}
+}
